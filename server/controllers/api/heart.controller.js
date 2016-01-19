@@ -22,7 +22,6 @@ function getHearts(req, res) {
           replyCount: heart.related('post').get('replies'),
           category: heart.related('category').get('category'),
           userId: heart.get('user_id'),
-          user: heart.related('user').get('full_name'),
           posted: heart.related('post').get('created_at')
         };
       });
