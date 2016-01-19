@@ -13,7 +13,7 @@ function getReplies(req, res) {
       var replyResponse = replies.map(function(reply) {
         return {
           id: reply.get('id'),
-          content: reply.escape('content'),
+          content: reply.get('content'),
           user: reply.related('user').get('full_name'),
           thumbs: reply.get('thumbs'),
           created_at: reply.get('created_at'),
